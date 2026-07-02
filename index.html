@@ -641,6 +641,12 @@
             transition: var(--transition-smooth);
         }
 
+        .timing-info {
+            flex-grow: 1;
+            text-align: left;
+            white-space: nowrap;
+        }
+
         .timing-card-horizontal h3,
         .timing-card-horizontal span {
             white-space: nowrap;
@@ -648,11 +654,6 @@
 
         .timing-card-horizontal.equal-height {
             height: 104px;
-        }
-        @media (max-width: 480px) {
-            .timing-card-horizontal.equal-height {
-                height: auto;
-            }
         }
         
         .timing-icon-wrapper {
@@ -693,10 +694,22 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 1rem;
-                padding: 1.5rem;
+                padding: 1.25rem !important;
+            }
+            .timing-card-horizontal.equal-height {
+                height: auto;
+            }
+            .timing-info {
+                text-align: center !important;
+                white-space: normal !important;
             }
             .timing-hours {
-                text-align: center;
+                text-align: center !important;
+                white-space: normal !important;
+            }
+            .timing-card-horizontal h3,
+            .timing-card-horizontal span {
+                white-space: normal !important;
             }
         }
 
@@ -1011,6 +1024,22 @@
                 flex: 0 0 280px; /* Horizontal scroll card by card on mobile */
             }
         }
+
+        @media (max-width: 768px) {
+            .about-collage {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .about-collage img:nth-child(2) {
+                margin-top: 0;
+            }
+            #contact .glass-panel {
+                padding: 1.25rem !important;
+            }
+            #contact .grid-2 {
+                gap: 1.5rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1043,7 +1072,7 @@
     <main>
         <!-- HERO SECTION -->
         <section id="home" class="hero">
-            <div class="hero-bg" data-alt="Dark, moody industrial texture resembling heavy brushed steel or cast iron plates, dramatic lighting casting deep shadows, minimalist and gritty. Brand colors of black, dark grey, and a subtle hint of crimson reflection. No text, signage, or lettering." style="background-image: url(&#39;https://labs.google.com/pomelli_downloads/websites/9M9zhTKncLt1rGLjztsOuX/resources/a5pHgNKAlNG1l8W6jhokKn?authuser=0&#39;); background-size: cover; background-position: center;"></div>
+            <div class="hero-bg" data-alt="Dark, moody industrial texture resembling heavy brushed steel or cast iron plates" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center;"></div>
             <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <div class="hero-tags">
@@ -1098,8 +1127,8 @@
                     </div>
                 </div>
                 <div class="about-collage">
-                    <img src="https://labs.google.com/pomelli_downloads/websites/9M9zhTKncLt1rGLjztsOuX/resources/a2jjtRJY-8rdkmMN_tp_hj?authuser=0" alt="Detail of professional gym equipment" data-alt="Extreme close-up of a knurled steel barbell resting on a heavy-duty rack. High contrast, sharp focus on the metallic texture, dark shadows around the edges. Energetic and authoritative mood. Gritty industrial aesthetic with black and grey tones. No text, signage, or lettering." class="img-fluid">
-                    <img src="https://labs.google.com/pomelli_downloads/websites/9M9zhTKncLt1rGLjztsOuX/resources/9LyLZVhCfFV9fcVYikYkEk?authuser=0" alt="Gym weight plates" data-alt="Close-up of matte black cast iron weight plates on a textured rubber gym floor, illuminated by a subtle red neon glow from the side. Dark, cinematic, high contrast, industrial fitness aesthetic. No text, signage, or lettering." class="img-fluid">
+                    <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=600&auto=format&fit=crop" alt="Detail of professional gym barbell on rack" class="img-fluid">
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=600&auto=format&fit=crop" alt="Gym weight plates" class="img-fluid">
                 </div>
             </div>
         </section>
@@ -1330,7 +1359,7 @@
                         <li class="feature-item"><i class="fa-solid fa-drumstick-bite"></i> Muscle Gain Nutrition</li>
                         <li class="feature-item"><i class="fa-solid fa-leaf"></i> Healthy Lifestyle Guide</li>
                     </ul>
-                    <img src="https://labs.google.com/pomelli_downloads/websites/9M9zhTKncLt1rGLjztsOuX/resources/9hv7H8k3sO69IBqUSCoO8q?authuser=0" alt="Healthy meal prep" data-alt="Close-up of a sleek black meal prep container holding grilled chicken, quinoa, and bright green broccoli on a dark slate countertop. Professional, high-contrast culinary lighting with a slight warm glow. Premium fitness nutrition aesthetic. No text, signage, or lettering." class="img-fluid" style="border: 1px solid var(--clr-grey);">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop" alt="Healthy meal prep container" class="img-fluid" style="border: 1px solid var(--clr-grey);">
                 </div>
             </div>
         </section>
@@ -1384,7 +1413,7 @@
 
         <!-- TRANSFORMATION -->
         <section class="section" style="position: relative;">
-            <div class="hero-bg" data-alt="Abstract composition of angled concrete surfaces and raw steel beams intersecting. Dramatic, high-contrast lighting creating stark geometric shapes in deep shadows and bright highlights. Minimalist, bold industrial aesthetic using shades of dark grey and off-white. No text, signage, or lettering." style="background-image: url(&#39;https://labs.google.com/pomelli_downloads/websites/9M9zhTKncLt1rGLjztsOuX/resources/9EOYSi-tu8vaR-daCU-_IY?authuser=0&#39;); background-size: cover; background-position: center; opacity: 0.4;"></div>
+            <div class="hero-bg" data-alt="Dark concrete background" style="background-image: url('https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0.2;"></div>
             <div class="hero-overlay" style="background: linear-gradient(to right, var(--clr-dark) 0%, transparent 100%);"></div>
             
             <div class="container grid-2" style="position: relative; z-index: 10;">
@@ -1394,7 +1423,7 @@
                     <p style="font-size: 1.25rem;">Whether your goal is significant weight loss, building raw strength, or complete body recomposition, our tailored approach guarantees results.</p>
                 </div>
                 <div>
-                    <img src="https://labs.google.com/pomelli_downloads/websites/9M9zhTKncLt1rGLjztsOuX/resources/8BtinaG974P8warI4yukMb?authuser=0" alt="Battle ropes" data-alt="Close-up of thick, heavy black battle ropes resting on a rough concrete floor, harsh dramatic overhead lighting creating deep shadows. High contrast, gritty industrial aesthetic with subtle red ambient light. No text, signage, or lettering." class="img-fluid" style="border: 2px solid var(--clr-red); box-shadow: var(--neon-glow);">
+                    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a25f1?q=80&w=600&auto=format&fit=crop" alt="Gym training with battle ropes" class="img-fluid" style="border: 2px solid var(--clr-red); box-shadow: var(--neon-glow);">
                 </div>
             </div>
         </section>
@@ -1546,9 +1575,9 @@
                                 <div class="timing-icon-wrapper">
                                     <i class="fa-solid fa-clock" style="font-size: 1.5rem; color: var(--clr-red);"></i>
                                 </div>
-                                <div style="flex-grow: 1; text-align: left; white-space: nowrap;">
-                                    <h3 style="margin-bottom: 0.25rem; font-size: 1.25rem; letter-spacing: 1px; white-space: nowrap; margin-top: 0; color: var(--clr-light);">Mon - Sat</h3>
-                                    <span style="font-size: 0.85rem; color: var(--clr-grey); text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-heading); white-space: nowrap;">Regular Hours</span>
+                                <div class="timing-info">
+                                    <h3 style="margin-bottom: 0.25rem; font-size: 1.25rem; letter-spacing: 1px; margin-top: 0; color: var(--clr-light);">Mon - Sat</h3>
+                                    <span style="font-size: 0.85rem; color: var(--clr-grey); text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-heading);">Regular Hours</span>
                                 </div>
                                 <div class="timing-hours">
                                     <div style="color: var(--clr-light);">5:00 AM – 1:00 PM</div>
@@ -1560,9 +1589,9 @@
                                 <div class="timing-icon-wrapper">
                                     <i class="fa-solid fa-calendar-day" style="font-size: 1.5rem; color: var(--clr-red);"></i>
                                 </div>
-                                <div style="flex-grow: 1; text-align: left; white-space: nowrap;">
-                                    <h3 style="margin-bottom: 0.25rem; font-size: 1.25rem; letter-spacing: 1px; white-space: nowrap; margin-top: 0; color: var(--clr-light);">Sunday</h3>
-                                    <span style="font-size: 0.85rem; color: var(--clr-red); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-heading); white-space: nowrap;">Morning Only</span>
+                                <div class="timing-info">
+                                    <h3 style="margin-bottom: 0.25rem; font-size: 1.25rem; letter-spacing: 1px; margin-top: 0; color: var(--clr-light);">Sunday</h3>
+                                    <span style="font-size: 0.85rem; color: var(--clr-red); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-heading);">Morning Only</span>
                                 </div>
                                 <div class="timing-hours">
                                     <div style="color: var(--clr-light);">7:00 AM – 10:00 AM</div>
