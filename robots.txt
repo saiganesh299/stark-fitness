@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stark-fitness-rho.vercel.app/sitemap.xml
